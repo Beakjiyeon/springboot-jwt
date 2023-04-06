@@ -1,0 +1,24 @@
+
+spring:
+  config:
+    activate:
+      on-profile: <PROFILE>
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://<HOST>:<PORT>/<DB>?autoReconnect=true&useSSL=false&characterEncoding=utf-8&tinyInt1isBit=false&serverTimezone=Asia/Seoul
+    username: <USERNAME>
+    password: <PWD>
+  jpa:
+    hibernate:
+      ddl-auto: validate
+      naming:
+        strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate.show_sql: true
+      hibernate.format_sql: true
+      hibernate.enable_lazy_load_no_trans: true
+      hibernate.globally_quoted_identifiers: true
+      hibernate.globally_quoted_identifiers_skip_column_definitions: true
+    database: mysql
+jwt:
+  secret: <SECRET>
