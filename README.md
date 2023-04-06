@@ -1,30 +1,25 @@
 ## springboot-jwt
 * JWT 를 이용한 인증 서버 만들기
-<br/>
-<br/>
 
 ## Stack
 ### Backend
 * Spring Boot
 * Spring Security
 * MySQL
-<br/>
-<br/>
+
 
 ## 기능 별 로직
-### 기본 동작은 간단하다.
+기본 동작은 간단하다.
 1. 클라이언트에서 ID/PW 로 로그인 요청
 2. 서버에서 DB에 해당 ID/PW 를 가진 유저가 있다면 액세스 토큰, 리프레시 토큰을 발급한다.
 3. 클라이언트는 발급 받은 액세스 토큰을 헤더에 담아 인증이 필요한 API 를 이용할 수 있다.
-<br/>
-<br/>
+
 
 ### 로그인
 [서버]
 * 요청 정보 (id, pw) 검증 
 * 액세스 토큰, 리프레시 토큰 발행 
 * 헤더에 토큰을 담아 응답
-<br/>
 <br/>
 
 ### 인증이 필요한 API 요청
@@ -37,7 +32,6 @@
     * 시큐리티 컨텍스트에 Authentication 객체 반영
   * 액세스 토큰이 만료된 경우
     * 필터 단위에서 자동으로 403 리턴
-<br/>
 <br/>
 
 ## 실행 가이드
@@ -55,8 +49,6 @@
 insert into member values('member_A', '1234');
 insert into member_roles values('member_A', 'USER');
 ```
-<br/>
-<br/>
 
 ## Todo
 [서버]
@@ -67,8 +59,7 @@ insert into member_roles values('member_A', 'USER');
 
 [프론트]
 * 프론트 구현하기 이왕이면 리액트 써보기
-<br/>
-<br/>
+
 
 ## 참고 레퍼런스
 * https://gksdudrb922.tistory.com/217
